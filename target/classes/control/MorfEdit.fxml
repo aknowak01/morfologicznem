@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Scene?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Scene fill="MINTCREAM" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.anstar.control.MorfEditController">
+	<AnchorPane centerShape="false" maxHeight="1080.0" maxWidth="1920.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="809.0" prefWidth="1303.0"
+				style="-fx-background-color: mintcream;">
+		<ChoiceBox fx:id="algorithmChoiceBox" layoutX="29.0" layoutY="14.0" prefHeight="46.0" prefWidth="309.0" style="-fx-background-color: #ADD8E6;"/>
+		<Button fx:id="selectImageButton" layoutX="356.0" layoutY="15.0" mnemonicParsing="false" onAction="#imageSelect" prefHeight="44.0" prefWidth="272.0"
+				style="-fx-background-color: #ADD8E6;" text="%key.selectImage" textAlignment="CENTER">
+			<font>
+				<Font name="Century Gothic" size="20.0"/>
+			</font>
+		</Button>
+		<Pane layoutX="29.0" layoutY="75.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity">
+			<fx:include fx:id="imageGroup" source="ImageGroup.fxml"/>
+			<Pane layoutX="53.0" layoutY="612.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity">
+				<fx:include fx:id="radioGroup" source="RadioGroup.fxml"/>
+			</Pane>
+			<Button fx:id="resetButton" layoutX="328.0" layoutY="623.0" mnemonicParsing="false" onAction="#reset" prefHeight="44.0" prefWidth="272.0"
+					style="-fx-background-color: #ADD8E6;" text="%key.reset" textAlignment="CENTER">
+				<font>
+					<Font name="Century Gothic" size="20.0"/>
+				</font>
+			</Button>
+		</Pane>
+	</AnchorPane>
+</Scene>

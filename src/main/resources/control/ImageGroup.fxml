@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<HBox alignment="TOP_CENTER" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.anstar.control.ImageGroupController">
+	<VBox>
+		<Pane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="600.0" prefWidth="600.0" style="-fx-border-color: BLACK;">
+			<ImageView fx:id="sourceImageView" fitHeight="600.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true"/>
+		</Pane>
+	</VBox>
+	<VBox alignment="CENTER" spacing="20.0">
+		<HBox.margin>
+			<Insets/>
+		</HBox.margin>
+		<padding>
+			<Insets left="20.0" right="20.0"/>
+		</padding>
+		<Button fx:id="replaceButton" mnemonicParsing="false" onAction="#fireReplaceButton" text="%key.replace"/>
+		<Button fx:id="executeButton" mnemonicParsing="false" onAction="#fireReplaceButton" text="execute"/>
+	</VBox>
+	<VBox>
+		<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="600.0" minWidth="600.0" prefHeight="600.0" prefWidth="600.0" style="-fx-border-color: BLACK;">
+			<ImageView fx:id="targetImageView" fitHeight="600.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true"/>
+		</Pane>
+		<Label fx:id="algorithmStepSliderLabel" contentDisplay="BOTTOM" text="Krok Algorytmu">
+			<graphic>
+				<Slider fx:id="algorithmStepSlider" blockIncrement="1.0" majorTickUnit="10.0" max="50.0" min="1.0" minorTickCount="9"
+						onMouseReleased="#sliderDragDroppedListener" prefWidth="600.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" value="1.0"/>
+			</graphic>
+		</Label>
+	</VBox>
+</HBox>

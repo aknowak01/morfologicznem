@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="TOP_CENTER" xmlns="http://javafx.com/javafx/18"
+	  xmlns:fx="http://javafx.com/fxml/1"
+	  fx:controller="pl.anstar.control.RadioGroupController">
+	<Label fx:id="languageLabel" alignment="TOP_CENTER"
+		   contentDisplay="BOTTOM" text="JĘZYK / LANGUAGE"
+		   textAlignment="CENTER">
+		<font>
+			<Font name="Century Gothic" size="22.0"/>
+		</font>
+		<graphic>
+			<HBox alignment="TOP_CENTER" spacing="30.0">
+				<RadioButton fx:id="languagePLRadio"
+							 alignment="CENTER_LEFT" mnemonicParsing="false"
+							 onAction="#setLanguageRadio" text="PL">
+					<font>
+						<Font name="Century Gothic" size="20.0"/>
+					</font>
+				</RadioButton>
+				<RadioButton fx:id="languageENGRadio"
+							 alignment="CENTER_RIGHT" mnemonicParsing="false"
+							 onAction="#setLanguageRadio" text="ENG">
+					<font>
+						<Font name="Century Gothic" size="20.0"/>
+					</font>
+				</RadioButton>
+			</HBox>
+		</graphic>
+	</Label>
+</VBox>
